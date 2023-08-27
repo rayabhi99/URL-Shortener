@@ -18,4 +18,5 @@ import org.springframework.stereotype.Component;
 public class PropertyHolder {
     private int defaultTtlInDays;
     private int maxTtlInDaysAllowed;
+    private int shortUrlLength;
 }
