@@ -25,7 +25,7 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
         )
 )
 
-@SpringBootApplication(scanBasePackages = {"com.rayabhi99.projects.urlshortener.app"})
+@SpringBootApplication(scanBasePackages = {"com.rayabhi99.projects.urlshortener"})
 @EnableConfigurationProperties
 
 public class UrlShortenerApplication {

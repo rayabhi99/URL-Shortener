@@ -11,6 +11,7 @@
     <modules>
         <module>url-shortener-application</module>
         <module>model</module>
+        <module>data</module>
     </modules>
 
     <properties>
