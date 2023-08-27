@@ -86,7 +86,8 @@ public class UrlShortenerServiceImpl implements UrlShortenerService {
             else {
                 validateShortUrl(createShortUrlRequest.getShortUrl());
             }
-            ShortUrl shortUrlEntity = shortUrlDataService.insertNewUrl(shortUrl, Integer.parseInt(createShortUrlRequest.getTtlInDays()));
+
+            ShortUrl shortUrlEntity = shortUrlDataService.insertNewUrl(shortUrl, createShortUrlRequest.getLongUrl(), Integer.parseInt(createShortUrlRequest.getTtlInDays()));
             return CreateShortUrlResponse.builder().
                     shortUrl(shortUrlEntity.getShortUrl()).
                     longUrl(shortUrlEntity.getLongUrl()).

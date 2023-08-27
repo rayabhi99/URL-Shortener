@@ -7,6 +7,8 @@ import io.swagger.v3.oas.annotations.servers.Server;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
+import org.springframework.retry.annotation.EnableRetry;
 
 /**
  * This class is the starting point of the Url Shortener Application - http://localhost:8080/app/swagger-ui/index.html
@@ -27,7 +29,8 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 
 @SpringBootApplication(scanBasePackages = {"com.rayabhi99.projects.urlshortener"})
 @EnableConfigurationProperties
-
+@EnableRetry
+@EnableMongoRepositories
 public class UrlShortenerApplication {
     public static void main(String[] args) {
         SpringApplication.run(UrlShortenerApplication.class, args);

@@ -28,7 +28,7 @@ public interface ShortUrlDataService {
      * @return
      * @throws Exception, for any IO issues
      */
-    public ShortUrl insertNewUrl(@NonNull String shortUrl, int ttlInDays) throws Exception;
+    public ShortUrl insertNewUrl(@NonNull String shortUrl, String longUrl, int ttlInDays) throws Exception;
     /**
      * It updates the shortUrl to the DB
      * @param shortUrl

@@ -11,3 +11,8 @@ propertyholder:
   defaultTtlInDays: 90
   maxTtlInDaysAllowed: 720
   shortUrlLength: 8
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/URL_Shortener
