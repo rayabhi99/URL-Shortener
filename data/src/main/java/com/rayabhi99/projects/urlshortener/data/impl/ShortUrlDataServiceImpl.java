@@ -73,7 +73,8 @@ public class ShortUrlDataServiceImpl implements ShortUrlDataService {
      */
     @Retryable(maxAttempts = MAX_RETRIES, include = {MongoException.class})
     @Override
-    public ShortUrl insertNewUrl(@NonNull String shortUrl, String longUrl, int ttlInDays) throws Exception {
+
+  public ShortUrl insertNewUrl(@NonNull String shortUrl, String longUrl, int ttlInDays) throws Exception {
         LocalDateTime currentDateTime = LocalDateTime.now();
         try {
             return shortUrlRepository.save(ShortUrl.builder().
@@ -142,7 +143,6 @@ public class ShortUrlDataServiceImpl implements ShortUrlDataService {
     private String getExpiryDateFrom(int ttlInDays, LocalDateTime currentDate) {
         return currentDate.plusDays(ttlInDays).toString();
     }
-
 
     private LocalDateTime convertToDateTimeFrom(String dateTime) {
         DateTimeFormatter formatter = DateTimeFormatter.ISO_LOCAL_DATE_TIME;
