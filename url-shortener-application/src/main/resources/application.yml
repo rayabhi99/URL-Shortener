@@ -1,0 +1,12 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /app
+
+logging:
+  level:
+    root: INFO
+
+propertyholder:
+  defaultTtlInDays: 90
+  maxTtlInDaysAllowed: 720
