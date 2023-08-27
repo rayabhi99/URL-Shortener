@@ -11,6 +11,10 @@ import org.springframework.lang.Nullable;
 public class CreateShortUrlRequest {
     @NonNull
     private String longUrl;
+
+    @Nullable
+    private String shortUrl;
+
     @Nullable
     private String ttlInDays;
 }

@@ -1,6 +1,7 @@
 package com.rayabhi99.projects.urlshortener.data;
 
 import com.rayabhi99.projects.urlshortener.model.entity.ShortUrl;
+import org.springframework.lang.NonNull;
 
 import java.util.List;
 
@@ -27,7 +28,7 @@ public interface ShortUrlDataService {
      * @return
      * @throws Exception, for any IO issues
      */
-    public ShortUrl insertNewUrl(ShortUrl shortUrl, int ttlInDays) throws Exception;
+    public ShortUrl insertNewUrl(@NonNull String shortUrl, int ttlInDays) throws Exception;
     /**
      * It updates the shortUrl to the DB
      * @param shortUrl
@@ -42,5 +43,5 @@ public interface ShortUrlDataService {
      * @return
      * @throws Exception, for any IO issues
      */
-    public void deleteShortUrl(ShortUrl shortUrl) throws Exception;
+    public void deleteShortUrl(String shortUrl) throws Exception;
 }

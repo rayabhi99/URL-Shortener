@@ -2,6 +2,7 @@ package com.rayabhi99.projects.urlshortener.data.impl;
 
 import com.rayabhi99.projects.urlshortener.data.ShortUrlDataService;
 import com.rayabhi99.projects.urlshortener.model.entity.ShortUrl;
+import org.springframework.lang.NonNull;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -23,7 +24,7 @@ public class ShortUrlDataServiceImpl implements ShortUrlDataService {
     }
 
     @Override
-    public ShortUrl insertNewUrl(ShortUrl shortUrl, int ttlInDays) throws Exception {
+    public ShortUrl insertNewUrl(@NonNull String shortUrl, int ttlInDays) throws Exception {
         return null;
     }
 
@@ -33,7 +34,7 @@ public class ShortUrlDataServiceImpl implements ShortUrlDataService {
     }
 
     @Override
-    public void deleteShortUrl(ShortUrl shortUrl) throws Exception {
+    public void deleteShortUrl(String shortUrl) throws Exception {
 
     }
 }

@@ -10,3 +10,4 @@ logging:
 propertyholder:
   defaultTtlInDays: 90
   maxTtlInDaysAllowed: 720
+  shortUrlLength: 8
